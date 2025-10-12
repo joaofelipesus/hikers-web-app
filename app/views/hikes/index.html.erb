@@ -8,12 +8,6 @@
 %>
 <%= render "shared/header", title: "Hikes" %>
 
-<div class="container">
-  <div class="alert alert-primary" role="alert">
-    New content added from the Rails codebase.
-  </div>
-</div>
-
 <% if @hikes.any? %>
   <div class="container list-group list-group-flush px-0">
     <%= render @hikes %>
