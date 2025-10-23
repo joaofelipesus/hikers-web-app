@@ -19,6 +19,13 @@ class ConfigurationsController < ApplicationController
             context: "modal",
             pull_to_refresh_enabled: false
           }
+        },
+        {
+          patterns: ["/hikes/[0-9]+/map"],
+          properties: {
+            uri: "hotwire://fragment/map",
+            title: "Map"
+          }
         }
       ]
     }
