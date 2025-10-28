@@ -9,5 +9,10 @@
 class MapsController < ApplicationController
   def show
     @hike = Hike.find(params[:hike_id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @hike }
+    end
   end
 end
