@@ -18,8 +18,19 @@
 
 <div class="container d-flex justify-content-between gap-2 mt-4">
   <% if user_signed_in? %>
-    <%= link_to "Add a hike", new_hike_path,
-      class: "btn btn-primary flex-grow-1 flex-sm-grow-0" %>
+    <%=
+      link_to(
+        "Add a hike",
+        new_hike_path,
+        class: "btn btn-primary flex-grow-1 flex-sm-grow-0 d-hotwire-native-none",
+        data: {
+          controller: "bridge--button",
+          bridge_title: "Add",
+          bridge_ios_image_name: "plus",
+          bridge_android_icon_name: "add"
+        }
+      )
+    %>
 
     <%= link_to "Sign out", session_path,
         class: "btn btn-outline-danger d-none d-hotwire-native-block",
